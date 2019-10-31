@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -std=c99 -pedantic -Wall -Wextra -Werror
 OBJ = program.o
-BIN = program
+BIN = $(OBJ:.o=)
 
 .PHONY: all clean check
 

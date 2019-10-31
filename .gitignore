@@ -2,4 +2,4 @@ tags
 *.so
 *.a
 *.o
-program
+*program

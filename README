@@ -4,7 +4,17 @@ The 'lib' directory contains the Makefile to create a static and a dynamic
 library. It also contains a sample of a test suite. Nothing much, just the
 basics.
 Usage:
-* make -> create the libraries
+* make -> generate the libraries
 * make check -> launch the test suite
 
 The 'program' directory contains the Makefile to create a binary.
+Usage:
+* make -> generate the binary
+* make check -> generate the test suite
+
+The 'simple' directory, is a simpler example using some implicit rules of make.
+Usage:
+  * TODO
+
+NB: This repo is mostly designed for my students. I will update it with various
+examples along the time.

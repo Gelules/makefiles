@@ -4,7 +4,7 @@ OBJ = src/program.o
 TESTS_OBJ = tests/tests.o
 STATIC = libprogram.a
 SHARED = libprogram.so
-BIN = tests_program
+BIN = program
 
 .PHONY: all static shared distclean clean check
 
@@ -31,10 +31,10 @@ distclean: clean
 
 check: $(BIN) $(STATIC) $(SHARED)
 	tests/tests.sh
-	$(RM) $(BIN)
-	$(CC) $(CFLAGS) $(TESTS_OBJ) $(STATIC) -o $(BIN)
+	@$(RM) $(BIN)
+	@$(CC) $(CFLAGS) $(TESTS_OBJ) $(STATIC) -o $(BIN)
 	tests/tests.sh
-	$(RM) $(BIN)
-	$(CC) $(CFLAGS) -o $(BIN) -L. $(OBJ) $(TESTS_OBJ) -lprogram
+	@$(RM) $(BIN)
+	@$(CC) $(CFLAGS) -o $(BIN) -L. $(OBJ) $(TESTS_OBJ) -l$(BIN)
 	tests/tests_shared.sh
-	$(RM) $(BIN)
+	@$(RM) $(BIN)

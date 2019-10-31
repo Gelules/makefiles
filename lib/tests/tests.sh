@@ -1,6 +1,6 @@
 #!/bin/sh
 
-./tests_program
+./program
 
 exit_status=$?
 

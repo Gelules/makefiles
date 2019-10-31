@@ -1,6 +1,6 @@
 #!/bin/sh
 
-LD_LIBRARY_PATH="." ./tests_program
+LD_LIBRARY_PATH="." ./program
 
 exit_status=$?
 

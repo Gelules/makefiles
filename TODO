@@ -1,2 +1,3 @@
-Add generic targets.
-Create the 'bin' directory files.
+Improve genericity.
+Improve the makefiles.
+Add new kinds of templates.  

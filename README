@@ -10,11 +10,12 @@ Usage:
 The 'program' directory contains the Makefile to create a binary.
 Usage:
 * make -> generate the binary
-* make check -> generate the test suite
+* make check -> launch the test suite
 
 The 'simple' directory, is a simpler example using some implicit rules of make.
 Usage:
-  * TODO
+  * make -> generate the binary
+  * make check -> launch the test suite
 
 NB: This repo is mostly designed for my students. I will update it with various
 examples along the time.

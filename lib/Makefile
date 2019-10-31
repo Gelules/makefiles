@@ -6,6 +6,8 @@ STATIC = libprogram.a
 SHARED = libprogram.so
 BIN = tests_program
 
+.PHONY: all static shared distclean clean check
+
 all: $(STATIC) $(SHARED)
 
 static: $(STATIC)

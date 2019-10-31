@@ -1,0 +1,10 @@
+This repository is a template of a Makefiles I use for most of my C projects.
+
+The 'lib' directory contains the Makefile to create a static and a dynamic
+library. It also contains a sample of a test suite. Nothing much, just the
+basics.
+Usage:
+* make -> create the libraries
+* make check -> launch the test suite
+
+The 'program' directory contains the Makefile to create a binary.

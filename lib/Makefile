@@ -1,4 +1,3 @@
-CC = gcc
 CFLAGS = -std=c99 -pedantic -Wall -Wextra -Werror -fPIC
 OBJ = src/program.o
 TESTS_OBJ = tests/tests.o
@@ -18,10 +17,10 @@ $(STATIC): $(OBJ)
 	$(AR) csr $@ $^
 
 $(SHARED): $(OBJ)
-	$(CC) $(CFLAGS) -shared -o $@ $^
+	$(CC) -shared -o $@ $^
 
 $(BIN): $(OBJ) $(TESTS_OBJ)
-	$(CC) $(CFLAGS) $^ -o $(BIN)
+	$(CC) $^ -o $(BIN)
 
 clean:
 	$(RM) $(OBJ) $(TESTS_OBJ)
@@ -32,9 +31,9 @@ distclean: clean
 check: $(BIN) $(STATIC) $(SHARED)
 	tests/tests.sh
 	@$(RM) $(BIN)
-	@$(CC) $(CFLAGS) $(TESTS_OBJ) $(STATIC) -o $(BIN)
+	@$(CC) $(TESTS_OBJ) $(STATIC) -o $(BIN)
 	tests/tests.sh
 	@$(RM) $(BIN)
-	@$(CC) $(CFLAGS) -o $(BIN) -L. $(OBJ) $(TESTS_OBJ) -l$(BIN)
+	@$(CC) -o $(BIN) -L. $(OBJ) $(TESTS_OBJ) -l$(BIN)
 	tests/tests_shared.sh
 	@$(RM) $(BIN)

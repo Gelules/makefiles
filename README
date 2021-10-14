@@ -17,5 +17,15 @@ Usage:
   * make -> generate the binary
   * make check -> launch the test suite
 
+The 'debug' directory is a project using Criterion as a testsuite framework. The
+main goal of this directory is to present how to compile normally and also with
+two more targets: 'gdb' to generate a binary with the debugging symbols and
+'asan' to compile with the address sanitizer.
+Usage:
+    * make -> Create the 'calculator' program
+    * make check -> Generate and launch the Criterion testsuite
+    * make gdb -> Compile the program with the -g flag to get symbols in gdb
+    * make asan -> Link with the address sanitizer flag.
+
 NB: This repo is mostly designed for my students. I will update it with various
 examples along the time.

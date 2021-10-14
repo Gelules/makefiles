@@ -1,4 +1,3 @@
-CC = gcc
 CFLAGS = -std=c99 -pedantic -Wall -Wextra -Werror
 OBJ = src/program.o
 BIN = program

@@ -1,4 +1,4 @@
-CFLAGS = -std=c99 -pedantic -Wall -Wextra -Werror -fPIC
+CFLAGS = -std=c99 -pedantic -Wall -Wextra -Werror
 OBJ = src/program.o
 TESTS_OBJ = tests/tests.o
 STATIC = libprogram.a
@@ -17,7 +17,7 @@ $(STATIC): $(OBJ)
 	$(AR) csr $@ $^
 
 $(SHARED): $(OBJ)
-	$(CC) -shared -o $@ $^
+	$(CC) -fPIC -shared -o $@ $^
 
 $(BIN): $(OBJ) $(TESTS_OBJ)
 	$(CC) $^ -o $(BIN)

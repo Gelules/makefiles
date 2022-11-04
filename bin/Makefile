@@ -1,4 +1,4 @@
-CFLAGS = -std=c99 -pedantic -Wall -Wextra -Werror
+CFLAGS = -std=c99 -pedantic -Wall -Wextra -Werror -Wvla
 OBJ = src/program.o
 BIN = program
 

@@ -1,4 +1,4 @@
-CFLAGS = -std=c99 -pedantic -Wall -Wextra -Werror
+CFLAGS = -std=c99 -pedantic -Wall -Wextra -Werror -Wvla
 OBJ = src/program.o
 TESTS_OBJ = tests/tests.o
 STATIC = libprogram.a

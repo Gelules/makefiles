@@ -1,4 +1,4 @@
-CFLAGS = -std=c99 -pedantic -Wall -Wextra -Werror
+CFLAGS = -std=c99 -pedantic -Wall -Wextra -Werror -Wvla
 MAIN = src/program.o
 OBJ = src/calculator.o
 TESTSOBJ = tests/tests.o
